@@ -1,0 +1,3 @@
+$Group = 'docker-users'
+$CurrentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+Add-LocalGroupMember -Group $Group -Member $CurrentUser -Verbose -ErrorAction Stop
